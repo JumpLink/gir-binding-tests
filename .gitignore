@@ -3,4 +3,4 @@
 *.gir
 *.vapi
 object.c
-langs/javascript/node_modules/
+#langs/javascript/node_modules/

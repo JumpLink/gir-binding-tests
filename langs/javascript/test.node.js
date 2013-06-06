@@ -3,10 +3,18 @@
 
 var gir = require("gir");
 gir.init();
-var ValaObject = gir.load('ValaObject');
+//gir.search_path("/home/jumplink/Projekte/git/vala-object/");
+//console.log(gir);
 
-ValaObject.say_hello_to('Node.js');
+var ValaObject = gir.load('ValaObject', '0.1');
 
-var inst = new ValaObject.ValaClass();
-console.log(inst); // => {}
-console.log(inst.append_to_name('called from Node.js'));
+var nodejs_version = 'Node.js Version: ' + process.version;
+
+ValaObject.global_method(nodejs_version);
+
+ValaObject.ValaClass.static_class_method(nodejs_version);
+
+var ValaClass = new ValaObject.ValaClass();
+
+ValaClass.class_method(nodejs_version);
+

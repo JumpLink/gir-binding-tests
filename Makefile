@@ -26,7 +26,8 @@ run-gnome-js: all
 	seed langs/javascript/test.gnome.js
 
 run-node-js: all
-	cd langs/javascript && npm install && node test.node.js
+	# cd langs/javascript && npm install && 
+	node langs/javascript/test.node.js
 
 c-source:
 	valac --ccode object.vala

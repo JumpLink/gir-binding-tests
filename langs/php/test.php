@@ -3,13 +3,18 @@ use GObject\ParamSpec as GParamSpec;
 
 if (extension_loaded("gobject")) {
 
-	GIRepository\load_ns('ValaObject');
-	ValaObject\say_hello_to("PHP");
+	$php_version = 'PHP Version: '.phpversion();
 
-	// creating objects are not working at the moment
-	// $inst = new ValaObject\ValaClass;
-	// print_r ($inst);
-	// $inst->append_to_name("called from PHP");
+	GIRepository\load_ns('ValaObject');
+
+	ValaObject\global_method($php_version);
+
+	ValaObject\ValaClass\static_class_method($php_version);
+
+	$ValaClass = new ValaObject\ValaClass;
+
+	$ValaClass->class_method($php_version);
+
 } else {
 	print ":-(\n";
 }
