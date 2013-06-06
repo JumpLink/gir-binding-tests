@@ -1,6 +1,5 @@
-# Use Vala for your next library, %username%
-
-![Objects for free](https://github.com/antono/vala-object/raw/master/objects.jpg)
+gir-binding-tests
+=================
 
 Write your next library in [Vala][Vala] and get bindings for free!
 
@@ -63,3 +62,4 @@ Otherwise just skip to next step :)
 [Vala]: https://live.gnome.org/Vala/
 [VBench]: http://code.google.com/p/vala-benchmarks/wiki/BenchResults
 [VBenchNew]: http://jpaflacerda.wordpress.com/2011/11/08/vala-benchmarking/
+=======
